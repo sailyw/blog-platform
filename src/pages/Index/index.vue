@@ -1,6 +1,9 @@
 <template>
-  <div id="index">首页</div>
+  <div id="index">
+    首页
+    <p>ss</p>
+  </div>
 </template>
 
 <script src='./index.js'></script>
-<style src='./index.css'></style>
+<style scoped lang="less" src='./index.less'></style>
