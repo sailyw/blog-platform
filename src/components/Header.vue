@@ -13,8 +13,13 @@
       </div>
     </template>
     <template v-if="isLogin">
-      <h1>Start share</h1>
-      <i class="edit el-icon-edit"></i>
+      <h1>
+        <router-link to="/">Start share</router-link>
+      </h1>
+      <router-link to="/create">
+        <i class="edit el-icon-plus"></i>
+      </router-link>
+
       <div class="user">
         <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username" />
         <ul>
@@ -93,10 +98,12 @@ header.login {
   h1 {
     margin: 0;
     padding: 0;
-    color: #fff;
     font-size: 40px;
     text-transform: uppercase;
     flex: 1;
+    a {
+      color: #ffffff;
+    }
   }
 
   .edit {
