@@ -1,39 +1,77 @@
 <template>
   <header :class="{login:isLogin,'no-login':!isLogin}">
-    <template>
+    <template v-if="!isLogin">
       <h1>Start share</h1>
       <p>精品博客汇聚</p>
-      <div class="btns" v-if="$routh.path!=='/login' && $route.path!=='/register'">
-        <router-link to="/login"><el-button>立即登录</el-button></router-link>>
-         <router-link to="/register"><el-button>注册账号</el-button></router-link>>
+      <div class="btns">
+        <el-button>立即登录</el-button>
+        <el-button>注册账号</el-button>
       </div>
+    </template>
+    <template v-if="isLogin">
+      <h1>Start share</h1>
+      <i class="edit el-icon-edit"></i>
+      <img class="avatar" src="http://cn.gravatar.com/avatar/1?s=128&d=identicon" alt />
     </template>
   </header>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
+  data() {
+    return {
+      isLogin: false
+    };
   }
 };
 </script>
+<style lang="less">
+@import "../assets/base.less";
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+header.no-login {
+  padding: 0 12% 30px 12%;
+  background: @bgColor;
+  display: grid;
+  justify-items: center;
+  h1 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 60px 0 0 0;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 15px 0 0 0;
+    color: #ffffff;
+  }
+  .btns {
+    margin-top: 20px;
+  }
+  button {
+    margin: 20px 5px 0;
+  }
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+header.login {
+  display: flex;
+  align-items: center;
+  background: @bgColor;
+  h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    flex: 1;
+  }
+  .edit {
+    color: #ffffff;
+    font-size: 30px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
 }
 </style>
