@@ -5374,6 +5374,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+marked@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/marked/download/marked-1.0.0.tgz#d35784245a04871e5988a491e28867362e941693"
+  integrity sha1-01eEJFoEhx5ZiKSR4ohnNi6UFpM=
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.npm.taobao.org/md5.js/download/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
