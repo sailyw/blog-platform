@@ -8,7 +8,7 @@
         </figure>
         <h3>
           {{blog.title}}
-          <span>{{blog.createdAt}}</span>
+          <span>{{friendlyDate(blog.createdAt)}}</span>
         </h3>
         <p>{{blog.description}}</p>
       </router-link>
